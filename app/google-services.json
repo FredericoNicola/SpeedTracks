@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "9708227465",
+    "project_id": "speedtracks",
+    "storage_bucket": "speedtracks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9708227465:android:ea92d5f86f330b42d82f58",
+        "android_client_info": {
+          "package_name": "com.example.speedtracks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9708227465-frog52neqjn32lmm8vvnq03h52ib09j7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhnODitQ7BfIGL6GSpVv7a9ZhhL0vfmsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9708227465-frog52neqjn32lmm8vvnq03h52ib09j7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
