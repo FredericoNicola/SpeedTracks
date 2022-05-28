@@ -9,6 +9,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.speedtracks.databinding.ActivityMainBinding
 import com.example.speedtracks.ui.register.RegisterFragment
+import com.google.android.material.navigation.NavigationBarView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -37,8 +38,9 @@ class MainActivity : AppCompatActivity() {
         if (auth.currentUser == null) {
 
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment_activity_main, RegisterFragment())
+            transaction.replace(R.id.fragment_Login, RegisterFragment())
             transaction.commit()
+
 
         }
     }

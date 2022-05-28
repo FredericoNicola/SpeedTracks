@@ -1,5 +1,7 @@
 package com.example.speedtracks.ui.home
 
+import android.graphics.Color
+import android.graphics.Color.WHITE
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,10 +30,56 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        binding.bar1.apply {
+            progressMax = 100f
+            setProgressWithAnimation(22f,1000)
+            progressBarWidth = 5f
+            backgroundProgressBarWidth = 7f
+            progressBarColor = Color.GREEN
+            roundBorder = true
+            backgroundProgressBarColor = Color.WHITE
+
+
         }
+        binding.bar2.apply {
+            progressMax = 100f
+            setProgressWithAnimation(79f,1000)
+            progressBarWidth = 5f
+            backgroundProgressBarWidth = 7f
+            progressBarColor = Color.RED
+            roundBorder = true
+            backgroundProgressBarColor = Color.WHITE
+
+
+
+
+
+        }
+        binding.bar3.apply {
+            progressMax = 100f
+            setProgressWithAnimation(55f,1000)
+            progressBarWidth = 5f
+            backgroundProgressBarWidth = 7f
+            progressBarColor = Color.YELLOW
+            roundBorder = true
+            backgroundProgressBarColor = Color.WHITE
+
+
+
+        }
+        binding.bar4.apply {
+            progressMax = 100f
+            setProgressWithAnimation(37f,1000)
+            progressBarWidth = 5f
+            backgroundProgressBarWidth = 7f
+            progressBarColor = Color.BLUE
+            roundBorder = true
+            backgroundProgressBarColor = Color.WHITE
+
+
+        }
+
+
         return root
     }
 

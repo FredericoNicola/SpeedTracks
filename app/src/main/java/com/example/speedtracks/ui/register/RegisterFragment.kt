@@ -9,14 +9,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.core.view.isVisible
 import com.example.speedtracks.MainActivity
-import com.example.speedtracks.R
-import com.example.speedtracks.databinding.FragmentHomeBinding
 import com.example.speedtracks.databinding.FragmentRegisterBinding
-import com.example.speedtracks.ui.home.HomeViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -54,15 +50,24 @@ class RegisterFragment : Fragment() {
 
         val userText = binding.userText.text
         val passwordText = binding.passwordText.text
+        val passwordTextc = binding.cpasswordText.text
 
         binding.registerButton.setOnClickListener{
-            if (binding.userText.text != null)
+            if (binding.userText.text != null && passwordTextc == passwordText)
             createAccount(userText.toString(), passwordText.toString())
-            else{
-
+            if (passwordText == null){
                 binding.textView.isVisible = true
-
             }
+            if (passwordTextc == null){
+                binding.textView.isVisible = true
+            }
+            if (userText == null){
+                binding.textView.isVisible = true
+            }
+            if (passwordText != passwordTextc){
+                binding.passDif.isVisible = true
+            }
+
         }
             // Initialize Firebase Auth
 
@@ -101,10 +106,7 @@ class RegisterFragment : Fragment() {
                         Toast.LENGTH_SHORT).show()
                     val user = auth.currentUser
                     updateUI(user)
-
                     goToActivity()
-
-
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
@@ -124,10 +126,6 @@ class RegisterFragment : Fragment() {
                     Log.d(TAG, "signInWithEmail:success")
                     val user = auth.currentUser
                     updateUI(user)
-
-
-
-
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
