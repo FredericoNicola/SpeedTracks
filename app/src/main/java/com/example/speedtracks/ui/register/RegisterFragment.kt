@@ -53,7 +53,7 @@ class RegisterFragment : Fragment() {
         val passwordTextc = binding.cpasswordText.text
 
         binding.registerButton.setOnClickListener{
-            if (binding.userText.text != null && passwordTextc == passwordText)
+            if (binding.userText.text != null && passwordTextc.toString() == passwordText.toString())
             createAccount(userText.toString(), passwordText.toString())
             if (passwordText == null){
                 binding.textView.isVisible = true
@@ -64,9 +64,21 @@ class RegisterFragment : Fragment() {
             if (userText == null){
                 binding.textView.isVisible = true
             }
-            if (passwordText != passwordTextc){
+            if (passwordText.toString() != passwordTextc.toString()){
                 binding.passDif.isVisible = true
             }
+
+        }
+
+        binding.loginButton.setOnClickListener{
+            signIn(userText.toString(), passwordText.toString())
+        }
+
+        binding.registerText.setOnClickListener{
+            binding.registerText.isVisible = false
+            binding.cpassword.isVisible = true
+            binding.registerButton.isVisible = true
+            binding.loginButton.isVisible = false
 
         }
             // Initialize Firebase Auth
@@ -95,7 +107,6 @@ class RegisterFragment : Fragment() {
 
     private fun createAccount(email: String, password: String){
 
-        Toast.makeText(context,"weeeeeeeeeeeeeeeeeeeeeeeeeeeeee", Toast.LENGTH_LONG).show()
 
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
@@ -123,9 +134,11 @@ class RegisterFragment : Fragment() {
             .addOnCompleteListener() { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
+                    Toast.makeText(context,"weeeeeeeeeeeeeeeeeeeeeeeeeeeeee", Toast.LENGTH_LONG).show()
                     Log.d(TAG, "signInWithEmail:success")
                     val user = auth.currentUser
                     updateUI(user)
+                    goToActivity()
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)

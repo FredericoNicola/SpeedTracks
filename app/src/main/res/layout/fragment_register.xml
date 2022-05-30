@@ -9,7 +9,35 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-76dp">
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="235dp"
+            android:layout_height="63dp"
+            android:text="Register you account"
+            android:visibility="invisible"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.738" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="321dp"
+            android:layout_height="24dp"
+            android:text="Por favor preencher os campos"
+            android:textColor="#FD2D00"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/registerButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.312" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/user"
@@ -21,7 +49,7 @@
             app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.923">
+            app:layout_constraintVertical_bias="0.849">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/user_text"
@@ -35,12 +63,13 @@
             android:layout_width="319dp"
             android:layout_height="56dp"
             android:hint="Password"
+
             app:layout_constraintBottom_toTopOf="@+id/registerButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.732">
+            app:layout_constraintVertical_bias="0.594">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_text"
@@ -49,17 +78,58 @@
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/registerText"
+            android:layout_width="321dp"
+            android:layout_height="24dp"
+            android:clickable="true"
+            android:text="Não tem conta? Registo!"
+            android:textAlignment="center"
+            android:textColor="#FD2D00"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/loginButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintVertical_bias="0.226" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="235dp"
+            android:layout_height="63dp"
+            android:text="Login"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintVertical_bias="0.171" />
+
+        <TextView
+            android:id="@+id/passDif"
+            android:layout_width="321dp"
+            android:layout_height="24dp"
+            android:text="Erro na confirmação das palavras Pass"
+            android:textColor="#FD2D00"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/registerButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.312" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cpassword"
             android:layout_width="319dp"
             android:layout_height="56dp"
             android:hint="Confirm Password"
-            app:layout_constraintBottom_toTopOf="@+id/registerButton"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.91">
+            app:layout_constraintVertical_bias="0.515">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/cpassword_text"
@@ -67,44 +137,6 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/registerButton"
-            android:layout_width="235dp"
-            android:layout_height="63dp"
-            android:text="Register you account"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.687" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="321dp"
-            android:layout_height="24dp"
-            android:text="Por favor preencher os campos"
-            android:textColor="#FD2D00"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/registerButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.477"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.418" />
-        <TextView
-        android:id="@+id/passDif"
-        android:layout_width="321dp"
-        android:layout_height="24dp"
-        android:text="Erro na confirmação das palavras Pass"
-        android:textColor="#FD2D00"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/registerButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
