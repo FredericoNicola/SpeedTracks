@@ -96,7 +96,7 @@ class RegisterFragment : Fragment() {
 
     }
 
-    public override fun onStart() {
+    override fun onStart() {
         super.onStart()
 
         val currentUser = auth.currentUser
