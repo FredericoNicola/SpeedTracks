@@ -1,5 +1,6 @@
 package com.example.speedtracks
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -37,9 +38,8 @@ class MainActivity : AppCompatActivity() {
         auth = Firebase.auth
         if (auth.currentUser == null) {
 
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_Login, RegisterFragment())
-            transaction.commit()
+           val intent = Intent(this, Login::class.java)
+            startActivity(intent)
 
 
         }
