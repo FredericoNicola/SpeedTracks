@@ -1,13 +1,8 @@
 package com.example.speedtracks
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.speedtracks.databinding.ActivityLoginBinding
 import com.example.speedtracks.ui.register.RegisterFragment
 
@@ -26,6 +21,9 @@ private lateinit var binding: ActivityLoginBinding
 
 
 
+    }
+    override fun onBackPressed() {
+        moveTaskToBack(true)
     }
     private  fun loginExpand(){
         val transaction = supportFragmentManager.beginTransaction()
