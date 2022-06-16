@@ -28,7 +28,7 @@ class Profile_Create : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentProfileCreateBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -39,12 +39,6 @@ class Profile_Create : Fragment() {
 
 
         return root
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ProfileCreateViewModel::class.java)
-
     }
 
 }

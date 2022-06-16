@@ -56,8 +56,8 @@ class NotificationsFragment : Fragment() {
 
         for ( i in shoeid.indices  ) {
 
-            val shoe = UserShoes(shoeid[i], progress[i])
-            shoeArrayList.add(shoe)
+           // val shoe = UserShoes(shoeid[i], progress[i])
+          //  shoeArrayList.add(shoe)
 
         }
 
@@ -94,7 +94,7 @@ class NotificationsFragment : Fragment() {
         override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
             // Create a new view, which defines the UI of the list item
             val view = LayoutInflater.from(viewGroup.context)
-                .inflate(R.layout.list_view, viewGroup, false)
+                .inflate(R.layout.list_item, viewGroup, false)
 
             return ViewHolder(view)
         }
