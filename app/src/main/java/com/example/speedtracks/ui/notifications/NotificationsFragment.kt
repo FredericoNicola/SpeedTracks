@@ -1,5 +1,6 @@
 package com.example.speedtracks.ui.notifications
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,16 +9,19 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.speedtracks.MainActivity
+import com.example.speedtracks.ShoeAdapter
+import com.example.speedtracks.UserShoes
 import com.example.speedtracks.databinding.FragmentNotificationsBinding
 
 class NotificationsFragment : Fragment() {
 
     private var _binding: FragmentNotificationsBinding? = null
+    private lateinit var shoeArrayList: ArrayList<UserShoes>
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -36,6 +40,26 @@ class NotificationsFragment : Fragment() {
 
         notificationsViewModel.text.observe(viewLifecycleOwner) {
         }
+
+        val shoeid = arrayOf(
+            "Nike air","adidas","asics"
+        )
+        val progress = intArrayOf(
+            10,50,60
+        )
+
+        shoeArrayList = ArrayList()
+
+        for ( i in shoeid.indices  ) {
+
+            val shoe = UserShoes(shoeid[i], progress[i])
+            shoeArrayList.add(shoe)
+
+        }
+
+        binding.listviewProfile.adapter = ShoeAdapter(context = ,shoeArrayList)
+
+
         return root
 
 
