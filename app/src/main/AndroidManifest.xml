@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpeedTracks"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ProfileCreate"
+            android:exported="false" />
         <activity
             android:name=".Login"
             android:exported="false"
@@ -28,7 +30,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

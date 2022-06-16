@@ -37,7 +37,7 @@
         android:layout_width="400dp"
         android:layout_height="600dp"
         android:visibility="invisible"
-        tools:listitem="@layout/list_view"
+        tools:listitem="@layout/list_item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

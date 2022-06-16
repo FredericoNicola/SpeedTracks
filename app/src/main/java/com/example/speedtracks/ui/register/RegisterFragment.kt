@@ -4,6 +4,7 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.text.TextUtils.replace
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,8 +12,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
+import androidx.fragment.app.FragmentManager
 import com.example.speedtracks.MainActivity
+import com.example.speedtracks.ProfileCreate
 import com.example.speedtracks.databinding.FragmentRegisterBinding
+import com.google.android.gms.auth.api.phone.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -117,7 +121,7 @@ class RegisterFragment : Fragment() {
                         Toast.LENGTH_SHORT).show()
                     val user = auth.currentUser
                     updateUI(user)
-                    goToActivity()
+                    goToProfileCreate()
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
@@ -159,6 +163,13 @@ class RegisterFragment : Fragment() {
     private fun goToActivity(){
         val i = Intent(context, MainActivity::class.java)
         startActivity(i)
+    }
+    private fun goToProfileCreate(){
+
+        val i = Intent(context, ProfileCreate::class.java)
+        startActivity(i)
+
+
     }
 
     override fun onDestroyView() {
