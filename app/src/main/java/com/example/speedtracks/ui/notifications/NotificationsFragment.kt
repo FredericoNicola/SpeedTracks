@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.speedtracks.databinding.FragmentNotificationsBinding
@@ -28,11 +29,16 @@ class NotificationsFragment : Fragment() {
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
+        binding.myShoeBtn.setOnClickListener {
+            binding.myShoeBtn.isVisible = false
+            binding.listviewProfile.isVisible = true
+        }
+
         notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
         }
         return root
+
+
     }
 
     override fun onDestroyView() {
