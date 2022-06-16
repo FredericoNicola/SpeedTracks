@@ -53,12 +53,7 @@ class NotificationsFragment : Fragment() {
 
         shoeArrayList = ArrayList()
 
-        for ( i in shoeid.indices  ) {
 
-            val shoe = UserShoes(shoeid[i], progress[i])
-            shoeArrayList.add(shoe)
-
-        }
 
         val i = context
 

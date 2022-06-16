@@ -105,7 +105,7 @@ class RegisterFragment : Fragment() {
 
         val currentUser = auth.currentUser
         if (currentUser != null){
-            reload();
+            reload()
         }
     }
 
@@ -135,7 +135,7 @@ class RegisterFragment : Fragment() {
     private fun signIn(email: String, password: String) {
         // [START sign_in_with_email]
         auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener() { task ->
+            .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Toast.makeText(context,"weeeeeeeeeeeeeeeeeeeeeeeeeeeeee", Toast.LENGTH_LONG).show()
