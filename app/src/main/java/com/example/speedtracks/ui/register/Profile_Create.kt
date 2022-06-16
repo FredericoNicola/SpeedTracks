@@ -15,9 +15,7 @@ import com.example.speedtracks.databinding.FragmentRegisterBinding
 
 class Profile_Create : Fragment() {
 
-    companion object {
-        fun newInstance() = Profile_Create()
-    }
+
 
     private lateinit var viewModel: ProfileCreateViewModel
     private var _binding: FragmentProfileCreateBinding? = null
