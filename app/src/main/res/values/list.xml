@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="shoes_array">
+        <item1>Jordan</item1>
+        <item2>Adidas</item2>
+        <item3>Nike</item3>
+    </string-array>
+</resources>
