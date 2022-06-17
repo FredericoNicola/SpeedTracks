@@ -41,7 +41,7 @@ class shoeDetails : AppCompatActivity() {
             backgroundProgressBarWidth = 7f
             progressBarColor = Color.GREEN
             roundBorder = true
-            backgroundProgressBarColor = Color.WHITE
+            backgroundProgressBarColor = Color.LTGRAY
         }
 
         binding.button.setOnClickListener {

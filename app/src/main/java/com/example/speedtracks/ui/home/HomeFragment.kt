@@ -37,7 +37,7 @@ class HomeFragment : Fragment() {
             backgroundProgressBarWidth = 7f
             progressBarColor = Color.GREEN
             roundBorder = true
-            backgroundProgressBarColor = Color.WHITE
+            backgroundProgressBarColor = Color.LTGRAY
         }
         binding.bar2.apply {
             progressMax = 100f
@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
             backgroundProgressBarWidth = 7f
             progressBarColor = Color.RED
             roundBorder = true
-            backgroundProgressBarColor = Color.WHITE
+            backgroundProgressBarColor = Color.LTGRAY
         }
         binding.bar3.apply {
             progressMax = 100f
@@ -55,7 +55,7 @@ class HomeFragment : Fragment() {
             backgroundProgressBarWidth = 7f
             progressBarColor = Color.YELLOW
             roundBorder = true
-            backgroundProgressBarColor = Color.WHITE
+            backgroundProgressBarColor = Color.LTGRAY
         }
 
         return root
