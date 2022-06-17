@@ -1,6 +1,7 @@
 package com.example.speedtracks.ui.notifications
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,14 +10,11 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.speedtracks.MainActivity
-import com.example.speedtracks.ShoeAdapter
-import com.example.speedtracks.UserShoes
 import com.example.speedtracks.databinding.FragmentNotificationsBinding
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.speedtracks.R
+import com.example.speedtracks.*
 
 class NotificationsFragment : Fragment() {
 
@@ -39,8 +37,68 @@ class NotificationsFragment : Fragment() {
 
         binding.myShoeBtn.setOnClickListener {
             binding.myShoeBtn.isVisible = false
-            binding.listviewProfile.isVisible = true
+            binding.myShoeBtn2.isVisible = true
+            binding.divider3.isVisible = true
+            binding.divider4.isVisible = true
+            binding.divider5.isVisible = true
+            binding.divider6.isVisible = true
+            binding.imageView.isVisible= true
+            binding.imageView2.isVisible = true
+            binding.imageView3.isVisible = true
+            binding.textView7.isVisible = true
+            binding.textView8.isVisible = true
+            binding.textView9.isVisible = true
+            binding.progressBar.isVisible = true
+            binding.progressBar2.isVisible = true
+            binding.progressBar3.isVisible = true
+
+            //binding.listviewProfile.isVisible = true
         }
+        binding.myShoeBtn2.setOnClickListener {
+            binding.myShoeBtn.isVisible = true
+            binding.myShoeBtn2.isVisible = false
+            binding.divider3.isVisible = false
+            binding.divider4.isVisible = false
+            binding.divider5.isVisible = false
+            binding.divider6.isVisible = false
+            binding.imageView.isVisible= false
+            binding.imageView2.isVisible = false
+            binding.imageView3.isVisible = false
+            binding.textView7.isVisible = false
+            binding.textView8.isVisible = false
+            binding.textView9.isVisible = false
+            binding.progressBar.isVisible = false
+            binding.progressBar2.isVisible = false
+            binding.progressBar3.isVisible = false
+
+            //binding.listviewProfile.isVisible = true
+        }
+        binding.textView7.setOnClickListener {
+            val i = Intent(context, shoeDetails::class.java)
+            i.putExtra("Title","Nike")
+            i.putExtra("Model","Revolution 6 FlyEase")
+            i.putExtra("KmUsed","100")
+            i.putExtra("KmEstimated","500")
+            startActivity(i)
+
+        }
+        binding.textView8.setOnClickListener {
+            val o = Intent(context, shoeDetails::class.java)
+            o.putExtra("Title","Asics")
+            o.putExtra("Model","Gel Lyte iii")
+            o.putExtra("KmUsed","300")
+            o.putExtra("KmEstimated","500")
+            startActivity(o)
+        }
+        binding.textView9.setOnClickListener {
+            val u = Intent(context, shoeDetails::class.java)
+            u.putExtra("Title","Adidas")
+            u.putExtra("Model","Trail Blazer")
+            u.putExtra("KmUsed","240")
+            u.putExtra("KmEstimated","500")
+            startActivity(u)
+        }
+
 
         notificationsViewModel.text.observe(viewLifecycleOwner) {
         }
@@ -61,10 +119,10 @@ class NotificationsFragment : Fragment() {
 
         }
 
-        binding.listviewProfile.adapter = ShoeAdapter( arrayList = this.shoeArrayList, context =
+        //binding.listviewProfile.adapter = ShoeAdapter( arrayList = this.shoeArrayList, context =
 
 
-        return root)
+        return root
 
 
     }
