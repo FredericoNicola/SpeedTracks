@@ -2,6 +2,7 @@ package com.example.speedtracks.ui.notifications
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -51,6 +52,34 @@ class NotificationsFragment : Fragment() {
             binding.progressBar.isVisible = true
             binding.progressBar2.isVisible = true
             binding.progressBar3.isVisible = true
+
+            binding.progressBar.apply {
+                progressMax = 500f
+                setProgressWithAnimation(100f,1000)
+                progressBarWidth = 5f
+                backgroundProgressBarWidth = 7f
+                progressBarColor = Color.GREEN
+                roundBorder = true
+                backgroundProgressBarColor = Color.WHITE
+            }
+            binding.progressBar2.apply {
+                progressMax = 500f
+                setProgressWithAnimation(300f,1000)
+                progressBarWidth = 5f
+                backgroundProgressBarWidth = 7f
+                progressBarColor = Color.RED
+                roundBorder = true
+                backgroundProgressBarColor = Color.WHITE
+            }
+            binding.progressBar3.apply {
+                progressMax = 500f
+                setProgressWithAnimation(240f,1000)
+                progressBarWidth = 5f
+                backgroundProgressBarWidth = 7f
+                progressBarColor = Color.YELLOW
+                roundBorder = true
+                backgroundProgressBarColor = Color.WHITE
+            }
 
             //binding.listviewProfile.isVisible = true
         }
