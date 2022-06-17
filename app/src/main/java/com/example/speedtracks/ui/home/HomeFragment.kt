@@ -57,15 +57,7 @@ class HomeFragment : Fragment() {
             roundBorder = true
             backgroundProgressBarColor = Color.WHITE
         }
-        binding.bar4.apply {
-            progressMax = 100f
-            setProgressWithAnimation(37f,1000)
-            progressBarWidth = 5f
-            backgroundProgressBarWidth = 7f
-            progressBarColor = Color.BLUE
-            roundBorder = true
-            backgroundProgressBarColor = Color.WHITE
-        }
+
         return root
     }
 

@@ -1,9 +1,12 @@
 package com.example.speedtracks
 
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View.inflate
+import androidx.core.view.isVisible
 import com.example.speedtracks.databinding.ActivityShoeDetailsBinding
 import java.io.Console
 
@@ -39,6 +42,15 @@ class shoeDetails : AppCompatActivity() {
             progressBarColor = Color.GREEN
             roundBorder = true
             backgroundProgressBarColor = Color.WHITE
+        }
+
+        binding.button.setOnClickListener {
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.nike.com"))
+            startActivity(i)
+        }
+        binding.button2.setOnClickListener {
+            binding.button2.isVisible=false
+            binding.button3.isVisible=true
         }
 
 

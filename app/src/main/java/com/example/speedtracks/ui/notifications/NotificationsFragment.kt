@@ -52,6 +52,9 @@ class NotificationsFragment : Fragment() {
             binding.progressBar.isVisible = true
             binding.progressBar2.isVisible = true
             binding.progressBar3.isVisible = true
+            binding.imageView5.isVisible = true
+            binding.imageView6.isVisible = true
+            binding.imageView7.isVisible = true
 
             binding.progressBar.apply {
                 progressMax = 500f
@@ -60,7 +63,7 @@ class NotificationsFragment : Fragment() {
                 backgroundProgressBarWidth = 7f
                 progressBarColor = Color.GREEN
                 roundBorder = true
-                backgroundProgressBarColor = Color.WHITE
+                backgroundProgressBarColor = Color.LTGRAY
             }
             binding.progressBar2.apply {
                 progressMax = 500f
@@ -69,7 +72,7 @@ class NotificationsFragment : Fragment() {
                 backgroundProgressBarWidth = 7f
                 progressBarColor = Color.RED
                 roundBorder = true
-                backgroundProgressBarColor = Color.WHITE
+                backgroundProgressBarColor = Color.LTGRAY
             }
             binding.progressBar3.apply {
                 progressMax = 500f
@@ -78,7 +81,7 @@ class NotificationsFragment : Fragment() {
                 backgroundProgressBarWidth = 7f
                 progressBarColor = Color.YELLOW
                 roundBorder = true
-                backgroundProgressBarColor = Color.WHITE
+                backgroundProgressBarColor = Color.LTGRAY
             }
 
             //binding.listviewProfile.isVisible = true
@@ -99,6 +102,9 @@ class NotificationsFragment : Fragment() {
             binding.progressBar.isVisible = false
             binding.progressBar2.isVisible = false
             binding.progressBar3.isVisible = false
+            binding.imageView5.isVisible = false
+            binding.imageView6.isVisible = false
+            binding.imageView7.isVisible = false
 
             //binding.listviewProfile.isVisible = true
         }
@@ -126,6 +132,15 @@ class NotificationsFragment : Fragment() {
             u.putExtra("KmUsed","240")
             u.putExtra("KmEstimated","500")
             startActivity(u)
+        }
+        binding.imageView5.setOnClickListener{
+
+        }
+        binding.imageView6.setOnClickListener{
+
+        }
+        binding.imageView7.setOnClickListener{
+
         }
 
 

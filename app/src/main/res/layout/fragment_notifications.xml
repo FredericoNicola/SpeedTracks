@@ -240,5 +240,41 @@
         app:layout_constraintTop_toTopOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/trash"
+        android:visibility="invisible"
+
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/progressBar3"
+        app:layout_constraintTop_toTopOf="@+id/progressBar3" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/trash"
+        android:visibility="invisible"
+
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/progressBar2"
+        app:layout_constraintTop_toTopOf="@+id/progressBar2" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/trash"
+        android:visibility="invisible"
+
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/progressBar" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
