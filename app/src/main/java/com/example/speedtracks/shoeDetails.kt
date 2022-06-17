@@ -13,27 +13,19 @@ class shoeDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityShoeDetailsBinding.inflate(layoutInflater)
         val view = binding.root
-        setContentView(R.layout.activity_shoe_details)
+        setContentView(view)
 
      val title =   intent.getStringExtra("Title")
      val model =   intent.getStringExtra("Model")
      val kmused = intent.getStringExtra("KmUsed")?.toFloat()
      val kmestimated =   intent.getStringExtra("KmEstimated")?.toFloat()
-println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-        println(model)
-        println(title)
-        println(kmused)
 
         binding.textView12.text = model
         binding.textView10.text = title
         binding.textView15.text = kmused.toString()
         binding.textView16.text = kmestimated.toString()
+
+
 
         val perc = kmestimated?.div(kmused!!)
 
